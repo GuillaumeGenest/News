@@ -14,6 +14,10 @@
 		067C1EDB29CD925E00861385 /* NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C1EDA29CD925E00861385 /* NewsTests.swift */; };
 		067C1EE529CD925E00861385 /* NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C1EE429CD925E00861385 /* NewsUITests.swift */; };
 		067C1EE729CD925E00861385 /* NewsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C1EE629CD925E00861385 /* NewsUITestsLaunchTests.swift */; };
+		067C1EF529CD947000861385 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C1EF429CD947000861385 /* News.swift */; };
+		067C1EF829CD97CB00861385 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C1EF729CD97CB00861385 /* ViewModel.swift */; };
+		067F7BFE29CE15DA0099EAE0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F7BFD29CE15DA0099EAE0 /* Utils.swift */; };
+		067F7C0029CE25560099EAE0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F7BFF29CE25560099EAE0 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		067C1EE029CD925E00861385 /* NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		067C1EE429CD925E00861385 /* NewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsUITests.swift; sourceTree = "<group>"; };
 		067C1EE629CD925E00861385 /* NewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		067C1EF429CD947000861385 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		067C1EF729CD97CB00861385 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		067F7BFD29CE15DA0099EAE0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		067F7BFF29CE25560099EAE0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				067C1EC829CD925900861385 /* NewsApp.swift */,
+				067F7BFC29CE15C40099EAE0 /* Utils */,
+				067C1EF629CD97B700861385 /* ViewModel */,
+				067C1EF329CD945C00861385 /* Model */,
 				067C1ECA29CD925900861385 /* ContentView.swift */,
 				067C1ECC29CD925D00861385 /* Assets.xcassets */,
 				067C1ECE29CD925D00861385 /* News.entitlements */,
@@ -127,6 +138,31 @@
 				067C1EE629CD925E00861385 /* NewsUITestsLaunchTests.swift */,
 			);
 			path = NewsUITests;
+			sourceTree = "<group>";
+		};
+		067C1EF329CD945C00861385 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				067C1EF429CD947000861385 /* News.swift */,
+				067F7BFF29CE25560099EAE0 /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		067C1EF629CD97B700861385 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				067C1EF729CD97CB00861385 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		067F7BFC29CE15C40099EAE0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				067F7BFD29CE15DA0099EAE0 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				067F7BFE29CE15DA0099EAE0 /* Utils.swift in Sources */,
+				067C1EF529CD947000861385 /* News.swift in Sources */,
 				067C1ECB29CD925900861385 /* ContentView.swift in Sources */,
+				067C1EF829CD97CB00861385 /* ViewModel.swift in Sources */,
 				067C1EC929CD925900861385 /* NewsApp.swift in Sources */,
+				067F7C0029CE25560099EAE0 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +477,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Guillaume-Genest.News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -475,7 +517,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Guillaume-Genest.News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
