@@ -12,8 +12,6 @@ import SwiftUI
 enum Country: String, CaseIterable{
     case French = "fr"
     case USA = "us"
-    case UK = "ae"
-    case Espagne = "es"
 }
 
 
