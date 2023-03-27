@@ -24,10 +24,6 @@ struct ContentView: View {
                         Menu {
                             Button(action: {countrylanguage = .USA},
                             label: { Text("Americain")})
-                            Button(action: {countrylanguage = .UK},
-                            label: { Text("Anglais")})
-                            Button(action: {countrylanguage = .Espagne},
-                            label: { Text("Espagnol")})
                             Button(action: {countrylanguage = .French},
                                            label: {
                                 Text("Francais")
