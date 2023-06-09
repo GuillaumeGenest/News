@@ -23,9 +23,6 @@ class NewsViewModel: ObservableObject {
                    print("No data returned from server")
                    return
                }
-               
-               print(String(data: data, encoding: .utf8)!)
-
                do {
                    let decoder = JSONDecoder()
                    decoder.dateDecodingStrategy = .iso8601
@@ -39,6 +36,13 @@ class NewsViewModel: ObservableObject {
            }
            task.resume()
        }
+    
+    func getURL(category: String, country: String) -> URL? {
+        let apiKey = "851dfef8f907405e9003a45a4ef62401"
+        let urlString = "https://newsapi.org/v2/top-headlines?country=\(country)&category=\(category)&apiKey=\(apiKey)"
+        return URL(string: urlString)
+    }
+    
 }
 
 struct NewsAPIResult: Codable {
